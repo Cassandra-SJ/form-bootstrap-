@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url(/ticket/5a0d3978a3352.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 1550px 750px;
+        }
+
+        .forms {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -150px;
+            float: initial;
+        }
+
+        .form-control {
+            margin-top: initial;
+        }
+
+        label {
+            display: inline;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forms ">
+            <div>
+                <h2>登陆</h2>
+            </div>
+            <form class="form-horizontal" role="form" action="/Login/Login?ReturnUrl=%2FRequest%2Findex " method="post">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="RuiJieId">&nbsp;用&nbsp;户&nbsp;名</label>        <br />
+
+                    <div class="col-sm-10">
+                        <input class="form-control" placeholder="请输入学号或工号" data-val="true" data-val-required="请输入用户名" id="ruijieId" name="RuiJieId" type="text" value="" />   <br />
+                    </div>
+                    <span id="ruijieId-error-files" style="color: #FF0000; display: none">你输入的用户名不存在，请重新输入或正在审核，请耐心等待</span>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="Password">&nbsp; 密&nbsp;码</label>        <br />
+                    <div class="col-sm-10">
+                        <input class="form-control" data-val="true" placeholder="请在此处输入你的密码！" data-val-required="请输入密码" id="password" name="Password" type="password" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label for="IsRememberMe">
+                                <input type="checkbox" data-val="true" data-val-required="保存密码字段是必需的。" id="IsRememberMe" name="IsRememberMe" value="true" /><input name="IsRememberMe" type="hidden" value="false" />
+                                保存密码
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="error-container">
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+                <input name="__RequestVerificationToken" type="hidden" value="VMfsjRrodxD5TGh4ZHy3uYBtBlPp7EgHE1AjQ8r_gHBFnbikJ70WRXLTTtEV2BVYwy9Y-B0jjITQwPvNSHUJmMljeZzsfqAdRQtCn-S_0pA1" /><input id="Id" name="Id" type="hidden" value="" />
+                <button type="button" class="btn btn-primary btn-lg btn-block">登陆</button>
+                <div>
+                    <a href="/Register">注册账号</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
